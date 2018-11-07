@@ -44,10 +44,10 @@ const getPlugins=()=>{
       new CleanWebpackPlugin(['build'])
     );
 
-    plugins.push( new MiniCssExtractPlugin({
-      filename: '[name]style.css'
-  })
-  );
+  //   plugins.push( new MiniCssExtractPlugin({
+  //     filename: '[name]style.css'
+  // })
+  // );
 
   }
 
@@ -91,8 +91,12 @@ const config:webpack.Configuration = {
        ...[
         {
           test: /\.css$/,
+          // use: [
+          //     devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          //     'css-loader'
+          // ]
           use: [
-              devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+               'style-loader' ,
               'css-loader'
           ]
       },

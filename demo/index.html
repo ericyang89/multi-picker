@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="ie=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+  <title>demo</title>
+  <script>
+    !(function (n, e) {
+      var t = n.documentElement,
+        i = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        o = function () {
+          var n = t.clientWidth;
+          n &&
+            (n >= 750
+              ? (t.style.fontSize = '100px')
+              : (t.style.fontSize = 100 * (n / 750) + 'px'));
+        };
+      n.addEventListener &&
+        (e.addEventListener(i, o, !1),
+          n.addEventListener('DOMContentLoaded', o, !1));
+    })(document, window);
+  </script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.idea
+.DS_Store
+.vscode
+.idea
+node_modules
+/server/node_modules
+npm-debug.log
+/.idea
+ref
+/ref
+yarn-error.log
+.eslintcache
+.next
+.DoNotEditMe.js
